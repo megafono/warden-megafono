@@ -8,6 +8,11 @@ module Warden
       isolate_namespace Warden::Megafono
 
       initializer 'megafono.warden' do |app|
+        if Rails.env.development?
+          require 'openssl'
+          OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+        end
+
         Warden::Manager.after_authentication do |_user, auth, opts|
           scope = opts.fetch(:scope)
           strategy = auth.winning_strategies[scope]

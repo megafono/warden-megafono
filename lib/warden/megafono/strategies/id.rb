@@ -92,14 +92,14 @@ module Warden
         end
 
         def redirect_uri
-          "http://#{config.domain_for.call('cockpit')}"
+          "https://#{config.domain_for.call('cockpit')}"
         end
 
         def oauth
           @oauth ||= ::OAuth2::Client.new(
             config.megafono.id.client_id,
             config.megafono.id.client_secret,
-            site: "http://#{config.domain_for.call('id')}/",
+            site: "https://#{config.domain_for.call('id')}/",
             authorize_url: '/oauth/authorize',
             token_url: '/oauth/token'
           )
