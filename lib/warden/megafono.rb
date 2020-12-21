@@ -1,4 +1,4 @@
-
+require 'bundler/setup'
 require 'warden/megafono/engine'
 
 module Warden
