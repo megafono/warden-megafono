@@ -15,4 +15,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'warden'
   spec.add_dependency 'oauth2'
+  spec.add_dependency 'megafono-domain'
 end
