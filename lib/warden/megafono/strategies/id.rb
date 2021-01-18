@@ -92,7 +92,7 @@ module Warden
         end
 
         def redirect_uri
-          Warden::Megafono.configuration.redirect_uri,
+          Warden::Megafono.configuration.redirect_uri
         end
 
         def oauth
