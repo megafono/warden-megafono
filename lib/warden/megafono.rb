@@ -16,7 +16,7 @@ module Warden
     end
 
     class Configuration
-      attr_accessor :client_id, :client_secret
+      attr_accessor :client_id, :client_secret, :redirect_uri
 
       def initialize
       end

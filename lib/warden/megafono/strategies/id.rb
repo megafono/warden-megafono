@@ -92,7 +92,7 @@ module Warden
         end
 
         def redirect_uri
-          "#{protocol}://#{::Megafono::Domain.('cockpit')}"
+          Warden::Megafono.configuration.redirect_uri,
         end
 
         def oauth
