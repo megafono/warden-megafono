@@ -3,4 +3,4 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gemspec
 
-gem 'megafono-domain', path: '../megafono-domain'
+gem 'megafono-domain', github: 'megafono/megafono-domain'

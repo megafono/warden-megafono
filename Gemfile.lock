@@ -1,5 +1,6 @@
-PATH
-  remote: ../megafono-domain
+GIT
+  remote: https://github.com/megafono/megafono-domain.git
+  revision: 9e7126882e074effc040d1a478b98e1f263a540e
   specs:
     megafono-domain (0.1.0)
 
