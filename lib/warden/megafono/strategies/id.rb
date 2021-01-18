@@ -97,8 +97,8 @@ module Warden
 
         def oauth
           @oauth ||= ::OAuth2::Client.new(
-            config.megafono.id.client_id,
-            config.megafono.id.client_secret,
+            Warden::Megafono.configuration.client_id,
+            Warden::Megafono.configuration.client_secret,
             site: "#{protocol}://#{::Megafono::Domain.('id')}/",
             authorize_url: '/oauth/authorize',
             token_url: '/oauth/token'
@@ -107,10 +107,6 @@ module Warden
 
         def protocol
           ::Megafono::Domain.protocol
-        end
-
-        def config
-          Rails.application.config
         end
       end
     end
