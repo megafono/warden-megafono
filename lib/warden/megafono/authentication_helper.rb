@@ -14,11 +14,11 @@ module Warden
       end
 
       def current_producer
-        warden.user(scope: :producer)
+        warden.user(:producer)
       end
 
       def user_signed?
-        warden.authenticated?(:id, scope: :producer)
+        warden.authenticated?(:producer)
       end
 
       def warden
