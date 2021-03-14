@@ -6,15 +6,11 @@ module Warden
       extend ActiveSupport::Concern
 
       included do
-        helper_method :current_producer, :user_signed?
+        helper_method :user_signed?
       end
 
       def authenticate!
         warden.authenticate!(:id, scope: :producer)
-      end
-
-      def current_producer
-        warden.user(:producer)
       end
 
       def user_signed?
